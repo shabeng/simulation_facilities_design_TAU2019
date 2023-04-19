@@ -89,7 +89,7 @@ def run_experiment_2(time_limit=2*604800, repeat=1, save_path='graphs'):
         plt.ylabel('Service Time')
         plt.xlabel('Number of Robots')
         plt.legend()
-        dur = time_limit / 60 / 60 / 24
+        dur = np.round(time_limit / 60 / 60 / 24)
         enter_rate_hour = np.round(enter_rate * 60 * 60)
         plt.title(f'Experiment 2 - {dur} Days with Entering Rate of {enter_rate_hour} Orders per Hour')
         plt.savefig(f'{save_path}/experiment2_{dur}_days_enterrate_{enter_rate_hour}.png')
